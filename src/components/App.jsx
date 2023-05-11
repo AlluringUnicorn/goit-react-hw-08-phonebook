@@ -1,14 +1,14 @@
 import { RegisterForm } from './Register';
 import { Login } from './Login';
 import { Route, Routes } from 'react-router';
-import { HomePage } from './HomePage';
-import { Contacts } from './Contacts';
-import { AppBar } from './AppBar';
+import { HomePage } from './HomePage/HomePage';
+import { Contacts } from './Contacts/Contacts';
+import { AppBar } from './AppBar/AppBar';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { refreshUser } from 'redux/auth/auth-operations';
-import { PrivateRoute } from './PrivateRoute';
-import { PublicRoute } from './PublicRoute';
+import { PrivateRoute } from './Routes/PrivateRoute';
+import { PublicRoute } from './Routes/PublicRoute';
 
 const App = () => {
   const dispatch = useDispatch();

@@ -2,8 +2,8 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchcontacts } from 'redux/thunk';
 import { ContactList } from './ContactList';
-import { Filter } from './Filter';
-import { Form } from './Form';
+import { Filter } from '../Filter';
+import { Form } from '../Form';
 
 export const Contacts = () => {
   const dispatch = useDispatch();

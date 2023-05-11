@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteContact } from 'redux/thunk';
-import css from './App.module.css';
+import css from '../App.module.css';
 
 export const ListItem = () => {
   const dispatch = useDispatch();
