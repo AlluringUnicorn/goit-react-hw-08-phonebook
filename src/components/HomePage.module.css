@@ -1,0 +1,17 @@
+.container{
+    padding-top: 100px;
+    text-align: center;
+}
+
+.heading{
+    font-size: 50px;
+    color:#36454F;
+    margin-bottom: 10px;
+}
+
+.p{
+    font-size: 25px;
+    color:#C3B1E1;
+    margin:0;
+    padding: 0;
+}

@@ -20,7 +20,7 @@ export const ListItem = () => {
 
   return filteredContacts.map(user => (
     <li key={user.id} className={css.list_item}>
-      {user.name}: {user.phone}
+      {user.name}: {user.number}
       <button
         className={css.delete_btn}
         type="button"

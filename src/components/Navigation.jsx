@@ -1,21 +1,20 @@
 import { NavLink } from 'react-router-dom';
-import Button from '@mui/material/Button';
+import css from './Navigation.module.css'
 
 export const Navigation = () => {
+  
   return (
-    <>
+    <div className={css.container}>
       <NavLink to="/">
-        <Button>Home</Button>
-      </NavLink>
-      <NavLink to="/register">
-        <Button>Register</Button>
-      </NavLink>
-      <NavLink to="/login">
-        <Button>Login</Button>
+        <button className={css.btn}>Home</button>
       </NavLink>
       <NavLink to="/contacts">
-        <Button>To Contacts</Button>
+        <button className={css.btn}>Contacts</button>
       </NavLink>
-    </>
+    </div>
   );
 };
+
+
+
+
