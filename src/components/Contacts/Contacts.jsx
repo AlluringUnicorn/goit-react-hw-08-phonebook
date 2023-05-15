@@ -10,12 +10,20 @@ export const Contacts = () => {
   const contacts = useSelector(state => state.contacts.entities);
   const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
 
+  const isRefreshing = useSelector(state => state.auth.isRefreshing);
+
   useEffect(() => {
     dispatch(fetchcontacts());
   }, [dispatch]);
 
   return (
     <>
+
+{
+    isRefreshing ? (
+      '...Loading'
+    )
+    : <>
       <h1>Phonebook</h1>
       <Form />
       {isLoggedIn && contacts.length > 0 && (
@@ -25,6 +33,8 @@ export const Contacts = () => {
           <ContactList />
         </>
       )}
+</>
+}
     </>
   );
 };

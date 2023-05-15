@@ -5,7 +5,7 @@ import { HomePage } from './HomePage/HomePage';
 import { Contacts } from './Contacts/Contacts';
 import { AppBar } from './AppBar/AppBar';
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { refreshUser } from 'redux/auth/auth-operations';
 import { PrivateRoute } from './Routes/PrivateRoute';
 import { PublicRoute } from './Routes/PublicRoute';
@@ -13,13 +13,23 @@ import { PublicRoute } from './Routes/PublicRoute';
 const App = () => {
   const dispatch = useDispatch();
 
+  const isRefreshing = useSelector(state => state.auth.isRefreshing);
+
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);
 
   return (
+
+
     <>
       <AppBar />
+
+      {
+    isRefreshing ? (
+      '...Loading'
+    )
+    : 
 
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -47,7 +57,7 @@ const App = () => {
             </PrivateRoute>
           }
         />
-      </Routes>
+      </Routes>}
     </>
   );
 };

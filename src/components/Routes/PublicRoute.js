@@ -4,5 +4,5 @@ import { Navigate } from 'react-router';
 export const PublicRoute = ({ children, ...routeProps }) => {
   const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
 
-  return !isLoggedIn ? children : <Navigate to="/" />;
+  return !isLoggedIn ? children : <Navigate to="/contacts" />;
 };
