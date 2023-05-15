@@ -3,6 +3,11 @@
 
 }
 
+.loader{
+    font-family: 'Wix Madefor Display', sans-serif;
+    font-size: 54px;
+}
+
 .form{
     border: 2px solid gray;
     padding: 15px;
